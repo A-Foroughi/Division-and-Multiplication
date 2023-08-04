@@ -2,16 +2,19 @@
 # between 2000 and 3200 (both included).
 # The numbers obtained should be printed in a comma-separated sequence on a single line.
 
+A = []
+B = []
 # Without using for
 n = 2000
 while n <= 3200:
     if n % 7 == 0:
         if n % 5 != 0:
-            print(n, end = ", ")
+            A.append(n)
     n += 1
-print()
+print(', '.join([str(x) for x in A]))
 print("-------------------------")
 # With for
 for i in range(2000, 3201):
     if i % 7 == 0 and i % 5 != 0:
-        print(i, end = ", ")
+        B.append(str(i))
+print(", ".join(B))
